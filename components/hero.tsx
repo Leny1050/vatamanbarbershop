@@ -5,7 +5,7 @@ import { Instagram, MapPin, Phone } from "lucide-react"
 
 export function Hero() {
   return (
-    <section className="relative min-h-[min(95vh,960px)] overflow-hidden flex flex-col bg-[#080807]">
+    <section className="relative overflow-hidden flex flex-col bg-[#080807]">
 
       {/* Top radial glow */}
       <div
@@ -37,11 +37,11 @@ export function Hero() {
         aria-hidden
       />
 
-      <div className="mx-auto flex w-full max-w-6xl flex-1 flex-col px-5 pb-16 pt-16 sm:px-8 sm:pt-24 lg:pt-28">
+      <div className="mx-auto flex w-full max-w-6xl flex-col px-5 pb-14 pt-12 sm:px-8 sm:pb-16 sm:pt-16 lg:pt-20">
         <div className="grid flex-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
 
           {/* ── LEFT ── */}
-          <div className="order-2 lg:order-1 flex flex-col gap-9">
+          <div className="order-2 lg:order-1 flex flex-col gap-8 sm:gap-9">
 
             {/* Eyebrow */}
             <p
@@ -59,12 +59,13 @@ export function Hero() {
                   style={{ background: "color-mix(in oklab, var(--primary) 80%, transparent)" }}
                   aria-hidden
                 />
-                <LogoMark size={92} priority className="relative" />
+                <LogoMark size={78} priority className="relative sm:hidden" />
+                <LogoMark size={92} priority className="relative hidden sm:inline-flex" />
               </div>
               <div className="text-center sm:text-left">
                 <h1 className="font-display font-bold uppercase leading-[0.88]">
                   <span
-                    className="block text-[5.5rem] tracking-tight sm:text-[6.5rem] lg:text-[7rem]"
+                    className="block text-[3.25rem] tracking-tight sm:text-[5.2rem] lg:text-[7rem]"
                     style={{
                       background:
                         "linear-gradient(135deg, #f0ebe3 30%, color-mix(in oklab, var(--primary) 75%, white) 100%)",
@@ -75,7 +76,7 @@ export function Hero() {
                   >
                     Vataman
                   </span>
-                  <span className="mt-2 block font-sans text-sm font-light tracking-[0.45em] text-foreground/50 sm:text-base">
+                  <span className="mt-2 block font-sans text-xs font-light tracking-[0.35em] text-foreground/55 sm:text-base sm:tracking-[0.45em]">
                     Barbershop · Ciocana
                   </span>
                 </h1>
@@ -93,20 +94,20 @@ export function Hero() {
             />
 
             {/* About */}
-            <p className="mx-auto max-w-md text-center font-sans text-[15px] leading-relaxed text-foreground/50 sm:mx-0 sm:text-left">
+            <p className="mx-auto max-w-md text-center font-sans text-[14px] leading-relaxed text-foreground/55 sm:mx-0 sm:text-left sm:text-[15px]">
               {TEXTS.about}
             </p>
 
             {/* CTA */}
             <div className="flex flex-col items-center gap-3 sm:flex-row sm:items-center sm:gap-5">
-              <BookingButton className="w-full sm:w-auto" />
-              <span className="font-sans text-[9px] uppercase tracking-[0.45em] text-foreground/35 text-center sm:text-left max-w-[10rem] leading-loose">
+              <BookingButton className="w-full max-w-full sm:w-auto" />
+              <span className="font-sans text-[9px] uppercase tracking-[0.4em] text-foreground/35 text-center sm:text-left max-w-[12rem] leading-loose">
                 {TEXTS.bookingNote}
               </span>
             </div>
 
             {/* Hours / city chips */}
-            <div className="flex flex-wrap items-center justify-center gap-8 sm:justify-start">
+            <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-8 sm:justify-start">
               <div className="text-center sm:text-left">
                 <p className="font-sans text-[9px] uppercase tracking-[0.5em] text-foreground/35">Program</p>
                 <p className="mt-1 font-sans text-sm tracking-wider text-foreground/70">
@@ -121,9 +122,9 @@ export function Hero() {
           </div>
 
           {/* ── RIGHT — contact card ── */}
-          <div className="order-1 lg:order-2">
+          <div className="order-1 lg:order-2 hidden lg:block">
             <div
-              className="relative mx-auto max-w-md overflow-hidden lg:max-w-none"
+              className="relative mx-auto w-full max-w-md overflow-hidden lg:max-w-none"
               style={{
                 background: "rgba(255,255,255,0.025)",
                 border: "0.5px solid rgba(255,255,255,0.07)",
@@ -141,7 +142,7 @@ export function Hero() {
                 aria-hidden
               />
 
-              <div className="relative p-6 sm:p-8 flex flex-col gap-6">
+              <div className="relative p-5 sm:p-8 flex flex-col gap-5 sm:gap-6">
                 {/* Label + Instagram */}
                 <div className="flex items-center justify-between">
                   <p className="font-sans text-[9px] uppercase tracking-[0.55em] text-foreground/40">

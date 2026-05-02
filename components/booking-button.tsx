@@ -15,7 +15,7 @@ export function BookingButton({ label = TEXTS.bookingButton, className }: Props)
       rel="noopener noreferrer"
       className={cn(
         "relative inline-flex w-full items-center justify-center gap-2 overflow-hidden",
-        "px-8 py-4 font-display text-base font-semibold uppercase tracking-[0.2em]",
+        "rounded-full px-8 py-4 font-display text-base font-semibold uppercase tracking-[0.2em]",
         "bg-foreground text-background transition-all duration-300",
         "hover:bg-primary hover:text-primary-foreground",
         "sm:text-lg",

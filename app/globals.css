@@ -117,7 +117,10 @@
 }
 
 @layer base {
-  * {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
     @apply border-border outline-ring/50;
   }
   body {
@@ -125,6 +128,10 @@
   }
   html {
     scroll-behavior: smooth;
+  }
+  html,
+  body {
+    overflow-x: hidden;
   }
   ::selection {
     background: color-mix(in oklab, var(--primary) 35%, black);

@@ -11,10 +11,10 @@ type Props = {
 
 export function Section({ id, eyebrow, title, description, children, className }: Props) {
   return (
-    <section id={id} className={cn("py-16 sm:py-24", className)}>
+    <section id={id} className={cn("py-14 sm:py-20 lg:py-24", className)}>
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         {(eyebrow || title || description) && (
-          <div className="mb-10 sm:mb-12">
+          <div className="mb-8 sm:mb-10 lg:mb-12">
             {eyebrow && (
               <div className="flex items-center gap-3 mb-3">
                 <div
@@ -33,12 +33,12 @@ export function Section({ id, eyebrow, title, description, children, className }
               </div>
             )}
             {title && (
-              <h2 className="brand-text font-display text-5xl font-bold uppercase tracking-wide sm:text-6xl">
+              <h2 className="brand-text font-display text-4xl font-bold uppercase tracking-wide sm:text-5xl lg:text-6xl">
                 {title}
               </h2>
             )}
             {description && (
-              <p className="mt-4 max-w-2xl font-sans text-base leading-relaxed text-muted-foreground">
+              <p className="mt-3 max-w-2xl font-sans text-[15px] leading-relaxed text-muted-foreground sm:text-base">
                 {description}
               </p>
             )}
